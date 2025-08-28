@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catering  - Afritalia Gallery</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #fafafa;
+      color: #333;
+    }
+    /* Hero Section */
+    .hero {
+      background: center/cover no-repeat;
+      height: 20vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .hero h1 {
+      position: relative;
+      z-index: 1;
+      font-size: 3rem;
+      margin: 0;
+    }
+    .back-btn {
+      display: inline-block;
+      margin: 1em auto;
+      padding: 0.7em 1.5em;
+      background: #006400;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    .back-btn:hover { background: #004d00; }
+
+    /* Gallery Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+	
+      
+    }
+	  
+	  .gallery-grid img {
+  width: 100%;   /* makes image fill the grid cell */
+  height: auto;  /* keeps aspect ratio */
+  display: block;
+}
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.5s ease;
+      display: block;
+    }
+    .gallery-item:hover img { transform: scale(1.1); }
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      padding: 0.5em;
+      text-align: center;
+      font-size: 1rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .gallery-item:hover .overlay { opacity: 1; }
+
+    footer {
+      text-align: center;
+      padding: 1.5em;
+      background: #222;
+      color: #ccc;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+	  <section class="hero">
+    <h1>Imvunulo</h1>
+	  </section>
+	  <div style="text-align:center;">
+    <p><a href="Services.html" class="back-btn">← Back to Services</a></p>
+	  </div>
+  </header>
+
+  <main>
+    <div class="gallery-grid">
+		<div class="gallery-item">
+      <img src="images/web1.jpeg" alt="Imvunulo Image">
+			 <div class="overlay">Imvunulo</div>
+      </div>
+		
+		<div class="gallery-item">
+		<img src="images/web9.jpeg" alt="Imvunulo Image Image">
+			 <div class="overlay">Imvunulo</div>
+      </div>
+		
+		<div class="gallery-item">
+		<img src="images/web8.jpeg" alt="Imvunulo Image Image">
+			<div class="overlay">Imvunulo</div>
+      </div>
+			
+		<div class="gallery-item">
+		<img src="images/web7.jpeg" alt="Imvunulo Image Image">
+		<div class="overlay">Imvunulo</div>
+      </div>
+		
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Afritalia. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
